@@ -1,8 +1,8 @@
 import React from "react";
-import './AddTask'
+import './AddTask.css'
 const AddTask = () => {
     return <>
-        <div className="containerAddTask"><input type="text">digite um texto aqui</input></div>
+        <div className="container"><input type="text" placeholder="digite um texto"></input></div>
     </>
 }
  

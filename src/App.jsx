@@ -42,8 +42,8 @@ function App() {
   return (
     <>
       <div className="container">
-        <AddTask />
-        <Button />
+        <AddTask/>
+        <Button/>
         <Tasks tasks={tasksings} />
       </div>
     </>

@@ -1,7 +1,19 @@
-.container{
-    margin: 30px auto;
-    max-width: 300px;
-    border: 2px solid rgb(158, 255, 237);
-    border-radius: 10px;
-    padding: 30px;
+.add-task-container {
+  display: flex;
+  width: 100%;
+  margin: 35px 0px;
+}
+.add-task-input {
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  background-color: #444;
+  color: #eee;
+  font-size: 16px;
+  padding: 0px 10px;
+  flex: 2px;
+}
+.add-task-button-container{
+    margin-left: 30px;
+    flex: 1;
 }

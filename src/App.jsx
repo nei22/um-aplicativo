@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import AddTask from "./Components/AddTask";
 import Button from "./Components/Button";
+import Task from "./Components/Task";
 import Tasks from "./Components/Tasks";
 
 function App() {
@@ -40,13 +41,13 @@ function App() {
   ]);
 
   return (
-    <>
+    
       <div className="container">
+        
         <AddTask/>
-        <Button/>
         <Tasks tasks={tasksings} />
       </div>
-    </>
+    
   );
 }
 

@@ -1,7 +1,11 @@
 import React from "react";
-import './Button.css'
-const Button = () => {
-    return <div className="container"><button type="submit">Submite formulário</button></div>
-}
- 
+import "./Button.css";
+const Button = ({children, onClick}) => {
+  return (
+    <button onClick={onClick} className="container-button">
+      {children}
+    </button>
+  );
+};
+
 export default Button;

@@ -3,9 +3,9 @@ import React from "react";
 
 const Task = ({ task }) => {
   return (
-    <>
-      <div className="container">{task.title}</div>
-    </>
+    
+      <div className="container-task">{task.title}</div>
+    
   );
 };
 

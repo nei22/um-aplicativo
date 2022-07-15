@@ -1,12 +1,11 @@
-.container {
+.container-task {
+  background-color: #444;
+  margin: 8px 0px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  border-radius: 5px;
+  justify-content: space-between;
+  color: rgb(195, 193, 193);
   align-items: center;
-  margin: 8px;
-  max-width: 300px;
-  border: 1px solid rgb(234, 234, 234);
-  border-radius: 8px 0;
-  background-color: rgb(49, 49, 49);
-  padding: 10px 20px;
+  /* text-align: center; */
+  padding: 10px 10px;
 }

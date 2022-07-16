@@ -1,14 +1,12 @@
-.container {
+.app-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  width: 100%;
   margin: 20px auto;
-  max-width: 500px;
+  max-width: 400px;
   border: 2px solid rgb(99, 255, 91);
   border-radius: 10px;
-  /* padding: 30px; */
-  padding: 0px 25px;
-
+  padding: 0px 20px;
 }
 

@@ -1,13 +1,18 @@
-import React from "react";
+import React ,{ useState } from "react";
 import Task from "./Task";
-import"./Tasks.css"
-const Tasks = ({ tasks }) => {
-    return (
-        <div className="texto">
-            {tasks.map((task) => 
-                <Task task={task} />
-            )}
-        </div>
-    )
-}
+const Tasks = ({ tasks, handleTaskClick,handleTaskDelition }) => {
+ 
+
+  return (
+    <>
+      {tasks.map((task) => (
+        <Task 
+        task={task} 
+        handleTaskClick={handleTaskClick}
+        handleTaskDelition={handleTaskDelition}
+        />
+      ))}
+    </>
+  );
+};
 export default Tasks;

@@ -1,53 +1,46 @@
 import React, { useState } from "react";
 import "./App.css";
+import { v4 as uuiv4 } from "uuid";
 import AddTask from "./Components/AddTask";
-import Button from "./Components/Button";
-import Task from "./Components/Task";
 import Tasks from "./Components/Tasks";
 
 function App() {
   // let message = "hello world!"
-  const [tasksings] = useState([
-    {
-      id: "1",
-      title: "Estudar Reacct-Js!!!!",
-      completed: true,
-    },
-    {
-      id: "2",
-      title: "Ler mais livros!!",
-      completed: true,
-    },
-    {
-      id: "3",
-      title: "EstudoooooooU",
-      completed: true,
-    },
-    {
-      id: "4",
-      title: "Ler mais!!@@@",
-      completed: true,
-    },
-    {
-      id: "5",
-      title: "EsReac!!!!",
-      completed: true,
-    },
-    {
-      id: "6",
-      title: "LeMaiVros!!",
-      completed: true,
-    },
+  const [tasks, setTasks] = useState([
+    { id: "1", title: "Estudar Programação", completed: true },
+    { id: "2", title: "Ler Livros", completed: false },
   ]);
-
+  const handleTaskClick = (taskId) => {
+    const newTask = tasks.map((task) => {
+      if (task.id === taskId) return { ...task, completed: !task.completed };
+      return task;
+    });
+    setTasks(newTask);
+  };
+  const handleTaskAddition = (taskTitle) => {
+    const newTasks = [
+      ...tasks,
+      {
+        title: taskTitle,
+        id: uuiv4(),
+        completed: false,
+      },
+    ];
+    setTasks(newTasks);
+  };
+  const handleTaskDelition = (taskId) => {
+    const newTasks = tasks.filter((task) => task.id !== taskId);
+    setTasks(newTasks);
+  };
   return (
-    
-      <div className="container">
-        
-        <AddTask/>
-        <Tasks tasks={tasksings} />
-      </div>
-    
+    <div className="app-container">
+      <AddTask handleTaskAddition={handleTaskAddition} />
+      <Tasks 
+      tasks={tasks} 
+      handleTaskClick={handleTaskClick} 
+      handleTaskDelition={handleTaskDelition}
+      />
+    </div>
   );
 }
 
